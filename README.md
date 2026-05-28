@@ -37,12 +37,14 @@
 
 </details>
 
+
 **About the Project**
 
 
 chat-with-medical-pdf is a Retrieval-Augmented Generation (RAG) system built for medical students and healthcare learners. Instead of relying on a plain LLM that might hallucinate medical facts, this system retrieves the most relevant passages directly from a medical document and uses them as grounded context for every answer.
 The default knowledge base is the Gale Encyclopedia of Medicine (2nd Edition) — a comprehensive medical reference covering thousands of conditions, procedures, and terminology. Users can also upload their own medical PDFs at any time and chat with them instantly.
 The goal is simple: make medical knowledge searchable, conversational, and accessible — while always staying grounded in source documents.
+
 
 **How It Works**
 
@@ -54,6 +56,7 @@ The top relevant chunks are retrieved using MMR (Maximum Marginal Relevance) sea
 Retrieved context + chat history + the question are passed to Mistral AI.
 Mistral generates a grounded, medically accurate response.
 The conversation history is maintained across turns for multi-turn dialogue.
+
 
 **Features**
 
@@ -92,7 +95,7 @@ The conversation history is maintained across turns for multi-turn dialogue.
 
 # Project Structure
 
-
+```text
 chat-with-medical-pdf/
 
 │
@@ -105,7 +108,8 @@ chat-with-medical-pdf/
 ├── .env                    # API keys 
 ├── .gitignore              # Excludes .env, Chroma_db, __pycache__, etc.
 ├── requirements.txt        # All Python dependencies
-└── README.md               
+└── README.md
+```              
 
 **🚀 Getting Started**
 Prerequisites:
