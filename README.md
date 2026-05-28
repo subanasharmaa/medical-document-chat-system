@@ -14,7 +14,7 @@
   Upload a document, ask questions, and get context-grounded answers — no hallucinations, just evidence-based responses.
 </p>
 
-         ⚠️ Disclaimer: This tool is strictly for educational purposes only. It is not a substitute for professional medical advice, diagnosis, or treatment. Always consult a licensed medical professional for clinical decisions.
+    ⚠️ Disclaimer: This tool is strictly for educational purposes only. It is not a substitute for professional medical advice, diagnosis, or treatment. Always consult a licensed medical professional for clinical decisions.
 
 <details>
 <summary>📋 Table of Contents</summary>
@@ -38,6 +38,8 @@
 </details>
 
 **About the Project**
+
+
 chat-with-medical-pdf is a Retrieval-Augmented Generation (RAG) system built for medical students and healthcare learners. Instead of relying on a plain LLM that might hallucinate medical facts, this system retrieves the most relevant passages directly from a medical document and uses them as grounded context for every answer.
 The default knowledge base is the Gale Encyclopedia of Medicine (2nd Edition) — a comprehensive medical reference covering thousands of conditions, procedures, and terminology. Users can also upload their own medical PDFs at any time and chat with them instantly.
 The goal is simple: make medical knowledge searchable, conversational, and accessible — while always staying grounded in source documents.
@@ -56,16 +58,25 @@ The conversation history is maintained across turns for multi-turn dialogue.
 **Features**
 
 📄 Upload any medical PDF and chat with it instantly in the same session.
+
 🏥 Default knowledge base from the Gale Encyclopedia of Medicine.
+
 🧠 Conversational memory —> remembers context across multiple turns.
+
 🔍 MMR-based retrieval —> fetches diverse, relevant document chunks.
+
 🚫 Strict guardrails —> never diagnoses, always recommends professionals.
+
 🔄 Seamless source switching —> toggle between uploaded PDF and default DB.
+
 🎨 Clean minimal UI —> typographic black-and-white Streamlit interface.
+
 ⚡ Fast in-memory indexing —> uploaded PDFs are processed and ready instantly.
 
+
 **RAG Pipleine Architecture**
-![RAG Pipeline](screenshots/rag-pipeline.png)
+<img width="936" height="862" alt="image" src="https://github.com/user-attachments/assets/d0b19474-3363-443b-baeb-a1fbdefe5dd9" />
+
 
 **Tech Stack**
 
@@ -80,7 +91,10 @@ The conversation history is maintained across turns for multi-turn dialogue.
 | **Environment** | Python-dotenv |
 
 # Project Structure
+
+
 chat-with-medical-pdf/
+
 │
 ├── app.py                  # Streamlit UI — chat interface, file upload, session state
 ├── main.py                 # Core RAG logic — retriever, LLM, prompt, chat loop
@@ -103,15 +117,18 @@ Prerequisites:
 1. Clone the repository
    git clone https://github.com/your-username/chat-with-medical-pdf.git
    cd chat-with-medical-pdf
+   
 2.Create and activate a virtual environment
    python -m venv venv
-   # On macOS/Linux
+    **On macOS/Linux**
    source venv/bin/activate
-   # On Windows
+    **On Windows**
    venv\Scripts\activate
+   
 3. Install dependencies
    pip install -r requirements.txt
-4. Build the default vector database
+   
+5. Build the default vector database
    Place your medical PDF (e.g. The_GALE_ENCYCLOPEDIA_of_MEDICINE_SECOND.pdf) in the project root, then run:
     python database.py
    This will chunk the PDF and persist the ChromaDB vector store to Chroma_db/.
@@ -121,7 +138,7 @@ Create a .env file in the project root:
 OPENAI_API_KEY=your_openai_api_key_here
 MISTRAL_API_KEY=your_mistral_api_key_here
 
-# Usage
+**Usage**
 Run the Streamlit app:
 --streamlit run app.py
 Then open your browser at http://localhost:8501
