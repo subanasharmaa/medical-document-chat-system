@@ -153,8 +153,8 @@ Type your question and press Enter. Type 0 to exit.
 
 **Screenshots**
 
-<img width="1372" height="900" alt="image" src="https://github.com/user-attachments/assets/f7f96590-e0d2-48aa-ae9c-720dd220037b" />
-<img width="1176" height="138" alt="image" src="https://github.com/user-attachments/assets/dbcf021c-b80c-4426-8261-42357cd04d22" />
+<img width="1900" height="862" alt="image" src="https://github.com/user-attachments/assets/86b18f44-dda9-403a-9ada-77b794fead89" />
+
 
 **License**
 This project is licensed under the MIT License — see the LICENSE file for details.
